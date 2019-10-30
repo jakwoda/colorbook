@@ -5,7 +5,7 @@ let colorClicked;
 let squares;
 //fetch svg 
 
-fetch('colorlay.svg')
+fetch('colorlay3.svg')
     .then(r => r.text())
     .then(text => {
         el.innerHTML = text;
@@ -16,9 +16,22 @@ fetch('colorlay.svg')
         let triangle =document.querySelector("#triangle");
         let square =document.querySelector("#square");
             
-        let red = document.querySelector("#red");
+        
         let green =document.querySelector("#green");
         let yellow =document.querySelector("#yellow");
+        let red = document.querySelector("#red");
+
+        let lime =document.querySelector("#Lime");
+        let gold =document.querySelector("#Gold");
+        let maroon = document.querySelector("#Maroon");
+
+        let olive =document.querySelector("#Olive");
+        let chocolate =document.querySelector("#Chocolate");
+        let fuchsia = document.querySelector("#Fuchsia");
+
+        
+       
+       
 
         //add event listeners for svg shapes to fill them 
 
@@ -30,12 +43,18 @@ fetch('colorlay.svg')
        red.addEventListener("click", colorPicked);
        green.addEventListener("click", colorPicked);
       yellow.addEventListener("click", colorPicked);
-
+      lime.addEventListener("click", colorPicked);
+      gold.addEventListener("click", colorPicked);
+      maroon.addEventListener("click", colorPicked);
+      olive.addEventListener("click", colorPicked);
+      chocolate.addEventListener("click", colorPicked);
+      fuchsia.addEventListener("click", colorPicked);
+      
         // color pallete function
       function colorPicked(){
         console.log(this.id + " was clicked");
-            colorClicked= this.id;
-            
+          colorClicked= this.id;
+          console.log(colorClicked);
         }
 
      // shape fill function
