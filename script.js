@@ -5,7 +5,7 @@ let colorClicked;
 let squares;
 //fetch svg 
 
-fetch('colorlay3.svg')
+fetch('colorpale.svg')
     .then(r => r.text())
     .then(text => {
         el.innerHTML = text;
@@ -15,6 +15,7 @@ fetch('colorlay3.svg')
         let circle = document.querySelector("#circle");
         let triangle =document.querySelector("#triangle");
         let square =document.querySelector("#square");
+  
             
         
         let green =document.querySelector("#green");
@@ -38,6 +39,8 @@ fetch('colorlay3.svg')
         circle.addEventListener("click", clickedPut);
         triangle.addEventListener("click", clickedPut);
        square.addEventListener("click", clickedPut);
+      
+       
       
 //add event listeners to color pallette
        red.addEventListener("click", colorPicked);
@@ -66,6 +69,7 @@ fetch('colorlay3.svg')
 
             console.log(colorClicked);
         }
+        
     
     })
     .catch(console.error.bind(console));
@@ -78,10 +82,10 @@ fetch('rasta.svg')
     .then(r => r.text())
     .then(text => {
         el2.innerHTML = text;
-        let squares =document.querySelectorAll(".cls-3, .cls-2, .cls-1");
-        console.log(squares);
+      /*   let squares =document.querySelectorAll(".cls-3, .cls-2, .cls-1");
+        console.log(squares); */
      let base = document.querySelector('#rastabook');
- let selector = '.cls-1, .cls-2, .cls-3';
+ let selector = '.cls-1, .cls-2, .cls-3, .cls-11';
 
 
 base.addEventListener('click', function(event) {
