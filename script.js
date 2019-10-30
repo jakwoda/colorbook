@@ -68,8 +68,7 @@ fetch('rasta.svg')
 base.addEventListener('click', function(event) {
   let closest = event.target.closest(selector);
 	if (closest && base.contains(closest)) {
-      closest.classList.add('blue');
-      console.log(closest);
+    console.log(closest);
       closest.style.fill=colorClicked;
      
       
